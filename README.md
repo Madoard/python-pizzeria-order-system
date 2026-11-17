@@ -1,17 +1,18 @@
 # python-pizzeria-order-system
-°•. ✿ .•° ────── ꒰ 🎀 ꒱ ────── °•. ✿ .•°
 
-# ˚₊‧꒰ა 🌸 Python Pizzeria Order System 🌸 ໒꒱‧₊˚
+⋆.ೃ࿔*:･ ────── ꒰ 🍒 ꒱ ────── ･:*࿔.ೃ⋆
 
-> ✧･ﾟ: *✧･ﾟ:* A command-line Python application that simulates a pizzeria ordering system, allowing customers to choose flavors and sizes while validating inputs and calculating the final bill. *:･ﾟ✧*:･ﾟ✧
+# ˚₊‧ ୨୧ 🍓 Python Pizzeria Order System 🍓 ୨୧ ‧₊˚
 
-‧₊˚✩彡 ──────────── ୨୧ ──────────── ✩彡˚₊‧
+> ₊˚⊹♡ A command-line Python application that simulates a pizzeria ordering system, allowing customers to choose flavors and sizes while validating inputs and calculating the final bill. ♡⊹˚₊
 
-## ꒰ 🦢 ꒱ Menu & Pricing
+꒷꒦︶꒷꒦︶ ๋ ࣭ ⭑ ───── 🎀 ───── ⭑ ࣭ ๋ ︶꒷꒦︶꒷꒦
+
+## ꒰ 🍰 ꒱ Menu & Pricing
 
 Customers can combine two pizza categories (**Savory** or **Sweet**) across three sizes (**Small**, **Medium**, or **Large**):
 
-| 🌷 Size | 🎀 Savory Pizza (`SP`) | 🌸 Sweet Pizza (`SW`) |
+| 🍓 Size | 🍒 Savory Pizza (`SP`) | 🍰 Sweet Pizza (`SW`) |
 | :---: | :---: | :---: |
 | **S** *(Small)* | `$ 30.00` | `$ 34.00` |
 | **M** *(Medium)* | `$ 45.00` | `$ 48.00` |
@@ -19,12 +20,12 @@ Customers can combine two pizza categories (**Savory** or **Sweet**) across thre
 
 ‧₊˚ ⋅ ─────────────────────── ⋅ ˚₊‧
 
-## ೃ⁀➷ Concepts Practiced
+## ⋆｡ﾟ☁︎｡⋆ Concepts Practiced
 
-* ₊˚⊹ **While loops** (`while`) for continuous ordering and input validation
-* ₊˚⊹ **Accumulator variables** (`total`) to sum multiple items in a single order
-* ₊˚⊹ **Nested conditional structures** (`if`, `elif`, `else`) for flavor and size combinations
-* ₊˚⊹ **String normalization** (`.strip().upper()`) and formatted output (`f-strings`)
+* ₊˚✧ **While loops** (`while`) for continuous ordering and input validation
+* ₊˚✧ **Accumulator variables** (`total`) to sum multiple items in a single order
+* ₊˚✧ **Nested conditional structures** (`if`, `elif`, `else`) for flavor and size combinations
+* ₊˚✧ **String normalization** (`.strip().upper()`) and formatted output (`f-strings`)
 
 °•. ✿ .•° ────── ꒰ 🎀 ꒱ ────── °•. ✿ .•°
 
