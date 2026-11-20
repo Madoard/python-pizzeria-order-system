@@ -2,7 +2,7 @@
 
   <p>─────────────────────── ✦ ───────────────────────</p>
 
-  <h1>˚₊‧꒰ა ✦ Sistema de Pedidos de Pizzaria em Python ✦ ໒꒱‧₊˚</h1>
+  <h1>˚₊‧꒰ა Sistema de Pedidos de Pizzaria em Python ໒꒱‧₊˚</h1>
 
   <p>
     <i>Sistema de pedidos em Python via linha de comando para combinar sabores e tamanhos de pizza com cálculo automático do total.</i>
@@ -18,19 +18,13 @@
 
 <br/>
 
-<p align="center">─────────────────────── · ───────────────────────</p>
-
 ### ✦ Resumo
 
 Permite registrar pedidos de pizza diretamente no terminal escolhendo entre opções salgadas (`PS`) ou doces (`PD`) e tamanhos (`P`, `M` ou `G`), validando entradas, acumulando vários itens na mesma sessão e exibindo o valor final da conta.
 
-<p align="center">─────────────────────── · ───────────────────────</p>
-
 ### ✦ Tecnologias
 
 - **Python 3.x:** Linguagem principal para laços de repetição, estruturas condicionais, tratamento de strings e interação via console (sem bibliotecas externas).
-
-<p align="center">─────────────────────── · ───────────────────────</p>
 
 ### ✦ Regras
 
