@@ -45,7 +45,7 @@ Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o t
 1. **Pré-requisitos:** Tenha o **Python 3.x** instalado na máquina.
 2. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/Madoard/NOME-DO-REPOSITORIO.git](https://github.com/Madoard/NOME-DO-REPOSITORIO.git)
+   git clone https://github.com/Madoard/NOME-DO-REPOSITORIO.git
    cd NOME-DO-REPOSITORIO
    ```
 3. **Execute o script (`pizzaria.py`):**
@@ -56,26 +56,26 @@ Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o t
 ### ✦ Exemplo de Uso
 
 ```text
-Welcome to Maria Eduarda Gonçalves's Pizzeria!
-Here is our menu:
-Size     Savory Pizza (SP)     Sweet Pizza (SW)
- S            $ 30.00              $ 34.00
- M            $ 45.00              $ 48.00
- L            $ 60.00              $ 66.00
+Bem-vindo à Pizzaria de Maria Eduarda Gonçalves!
+Aqui está o nosso cardápio:
+Tamanho     Pizza Salgada (PS)     Pizza Doce (PD)
+ P              R$ 30.00              R$ 34.00
+ M              R$ 45.00              R$ 48.00
+ G              R$ 60.00              R$ 66.00
 
-Enter the desired flavor (SP/SW): sp
-Enter the desired size (S/M/L): m
-You ordered a Savory Pizza (Size M): $ 45.00
+Informe o sabor desejado (PS/PD): ps
+Informe o tamanho desejado (P/M/G): m
+Você pediu uma Pizza Salgada (Tamanho M): R$ 45.00
 
-Would you like to order anything else? (Y/N): y
+Deseja pedir mais alguma coisa? (S/N): s
 
-Enter the desired flavor (SP/SW): sw
-Enter the desired size (S/M/L): s
-You ordered a Sweet Pizza (Size S): $ 34.00
+Informe o sabor desejado (PS/PD): pd
+Informe o tamanho desejado (P/M/G): p
+Você pediu uma Pizza Doce (Tamanho P): R$ 34.00
 
-Would you like to order anything else? (Y/N): n
+Deseja pedir mais alguma coisa? (S/N): n
 
-Thank you for your order! Your total is: $ 79.00
+Obrigado pelo pedido! O total da sua conta é: R$ 79.00
 ```
 
 <p align="center">─────────────────────── · ───────────────────────</p>
@@ -86,49 +86,49 @@ O código completo está em [`pizzaria.py`](./pizzaria.py). Abaixo está a estru
 
 ```python
 total = 0
-answer = "Y"
+resposta = "S"
 
-while answer == "Y":
-    flavor = input("\nEnter the desired flavor (SP/SW): ").strip().upper()
-    while flavor != "SP" and flavor != "SW":
-        print("Invalid flavor. Please try again.")
-        flavor = input("Enter the desired flavor (SP/SW): ").strip().upper()
+while resposta == "S":
+    sabor = input("\nInforme o sabor desejado (PS/PD): ").strip().upper()
+    while sabor != "PS" and sabor != "PD":
+        print("Sabor inválido. Tente novamente.")
+        sabor = input("Informe o sabor desejado (PS/PD): ").strip().upper()
 
-    size = input("Enter the desired size (S/M/L): ").strip().upper()
-    while size != "S" and size != "M" and size != "L":
-        print("Invalid size. Please try again.")
-        size = input("Enter the desired size (S/M/L): ").strip().upper()
+    tamanho = input("Informe o tamanho desejado (P/M/G): ").strip().upper()
+    while tamanho != "P" and tamanho != "M" and tamanho != "G":
+        print("Tamanho inválido. Tente novamente.")
+        tamanho = input("Informe o tamanho desejado (P/M/G): ").strip().upper()
 
-    if flavor == "SP":
-        if size == "S":
-            print("You ordered a Savory Pizza (Size S): $ 30.00")
+    if sabor == "PS":
+        if tamanho == "P":
+            print("Você pediu uma Pizza Salgada (Tamanho P): R$ 30.00")
             total += 30
-        elif size == "M":
-            print("You ordered a Savory Pizza (Size M): $ 45.00")
+        elif tamanho == "M":
+            print("Você pediu uma Pizza Salgada (Tamanho M): R$ 45.00")
             total += 45
         else:
-            print("You ordered a Savory Pizza (Size L): $ 60.00")
+            print("Você pediu uma Pizza Salgada (Tamanho G): R$ 60.00")
             total += 60
     else:
-        if size == "S":
-            print("You ordered a Sweet Pizza (Size S): $ 34.00")
+        if tamanho == "P":
+            print("Você pediu uma Pizza Doce (Tamanho P): R$ 34.00")
             total += 34
-        elif size == "M":
-            print("You ordered a Sweet Pizza (Size M): $ 48.00")
+        elif tamanho == "M":
+            print("Você pediu uma Pizza Doce (Tamanho M): R$ 48.00")
             total += 48
         else:
-            print("You ordered a Sweet Pizza (Size L): $ 66.00")
+            print("Você pediu uma Pizza Doce (Tamanho G): R$ 66.00")
             total += 66
 
-    answer = input("\nWould you like to order anything else? (Y/N): ").strip().upper()
-    while answer != "Y" and answer != "N":
-        print("Invalid option. Please enter Y or N.")
-        answer = input("Would you like to order anything else? (Y/N): ").strip().upper()
+    resposta = input("\nDeseja pedir mais alguma coisa? (S/N): ").strip().upper()
+    while resposta != "S" and resposta != "N":
+        print("Opção inválida. Digite S ou N.")
+        resposta = input("Deseja pedir mais alguma coisa? (S/N): ").strip().upper()
 
-print(f"\nThank you for your order! Your total is: $ {total:.2f}")
+print(f"\nObrigado pelo pedido! O total da sua conta é: R$ {total:.2f}")
 ```
 
-- **Loop contínuo de pedidos (`while`):** Mantém o fluxo ativo enquanto o cliente desejar adicionar itens (`Y`) e valida as respostas de sabor (`SP`/`SW`), tamanho (`S`/`M`/`L`) e continuidade (`Y`/`N`).
+- **Loop contínuo de pedidos (`while`):** Mantém o fluxo ativo enquanto o cliente desejar adicionar itens (`S`) e valida as respostas de sabor (`PS`/`PD`), tamanho (`P`/`M`/`G`) e continuidade (`S`/`N`).
 - **Condicionais aninhadas (`if / elif / else`):** Mapeia cada combinação de sabor e tamanho ao valor correspondente do cardápio.
 - **Acúmulo e formatação:** Soma os valores na variável `total`, sanitiza entradas com `.strip().upper()` e exibe o valor final formatado com `f-strings` (`:.2f`).
 
