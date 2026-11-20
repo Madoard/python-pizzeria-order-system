@@ -6,7 +6,7 @@ NOMES = {"PS": "Pizza Salgada", "PD": "Pizza Doce"}
 
 
 def mostrar_cardapio():
-    """Exibe a mensagem de boas-vindas e o cardápio a partir do dicionário de preços."""
+    #Exibe a mensagem de boas-vindas e o cardápio a partir do dicionário de preços.
     print("Bem-vindo à Pizzaria de Maria Eduarda Gonçalves!\nAqui está o nosso cardápio:")
     print("Tamanho     Pizza Salgada (PS)     Pizza Doce (PD)")
     for tamanho in ("P", "M", "G"):
@@ -14,7 +14,7 @@ def mostrar_cardapio():
 
 
 def pedir_opcao(mensagem, opcoes):
-    """Pergunta até o usuário digitar uma das opções válidas e devolve a resposta."""
+    #Pergunta até o usuário digitar uma das opções válidas e devolve a resposta.
     resposta = input(mensagem).strip().upper()
     while resposta not in opcoes:
         print("Opção inválida. Tente novamente.")
