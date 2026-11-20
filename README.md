@@ -136,13 +136,14 @@ if __name__ == "__main__":
     main()
 ```
 
-- **Loop contínuo de pedidos (`while`):** Mantém o fluxo ativo enquanto o cliente desejar adicionar itens (`S`) e valida as respostas de sabor (`PS`/`PD`), tamanho (`P`/`M`/`G`) e continuidade (`S`/`N`).
-- **Condicionais aninhadas (`if / elif / else`):** Mapeia cada combinação de sabor e tamanho ao valor correspondente do cardápio.
-- **Acúmulo e formatação:** Soma os valores na variável `total`, sanitiza entradas com `.strip().upper()` e exibe o valor final formatado com `f-strings` (`:.2f`).
+- **Estrutura de dados e funções (`PRECOS`, `NOMES`, `mostrar_cardapio`, `pedir_opcao`):** Centraliza os preços e nomes em dicionários, gera o cardápio com um laço `for` e reaproveita a validação de entradas com `.strip().upper()` e `not in`.
+- **Fluxo principal e loop (`main` / `while`):** Controla múltiplos pedidos em uma mesma sessão, consulta `PRECOS[sabor][tamanho]` diretamente sem `if/elif` aninhados e acumula o valor em `total`.
+- **Formatação de saída:** Exibe cada item e o fechamento da conta com `f-strings` formatadas em duas casas decimais (`:.2f`).
 
 <br/>
 
 <div align="center">
   <p>°•. ✦ .•° ────── ꒰ ✦ ꒱ ────── °•. ✦ .•°</p>
   <p><i>Feito por <b>Eduarda Gonçalves</b></i></p>
+</div>
 </div>
