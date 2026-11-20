@@ -1,11 +1,11 @@
 <div align="center">
 
-  <p>｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ ──────────── ꒰ 🍕 ꒱ ──────────── ⋆｡ﾟ☾ ﾟ｡⋆｡☁︎｡ﾟ</p>
+  <p>─────────────────────── ✦ ───────────────────────</p>
 
-  <h1>˚₊‧꒰ა 🍅 Sistema de Pedidos de Pizzaria em Python 🍅 ໒꒱‧₊˚</h1>
+  <h1>˚₊‧꒰ა ✦ Sistema de Pedidos de Pizzaria em Python ✦ ໒꒱‧₊˚</h1>
 
   <p>
-    <i>✧･ﾟ: *✧･ﾟ:* Sistema de pedidos em Python via linha de comando permitindo que clientes combinem sabores e tamanhos de pizza com validação de entradas e cálculo automatizado da conta *:･ﾟ✧*:･ﾟ✧</i>
+    <i>Sistema de pedidos em Python via linha de comando para combinar sabores e tamanhos de pizza com cálculo automático do total.</i>
   </p>
 
   <p>
@@ -18,29 +18,29 @@
 
 <br/>
 
-<p align="center">‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾. ─────────────────────── ‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.</p>
+<p align="center">─────────────────────── · ───────────────────────</p>
 
-### ╰┈➤ ꒰ 🍽️ ꒱ Cardápio & Matriz de Preços
+### ✦ Resumo
 
-Os clientes podem combinar duas categorias de pizza (**Salgada** ou **Doce**) em três tamanhos (**Pequena**, **Média** ou **Grande**):
+Permite registrar pedidos de pizza diretamente no terminal escolhendo entre opções salgadas (`PS`) ou doces (`PD`) e tamanhos (`P`, `M` ou `G`), validando entradas, acumulando vários itens na mesma sessão e exibindo o valor final da conta.
 
-| 🍕 Tamanho | 🧀 Pizza Salgada (`PS`) | 🍫 Pizza Doce (`PD`) |
+<p align="center">─────────────────────── · ───────────────────────</p>
+
+### ✦ Tecnologias
+
+- **Python 3.x:** Linguagem principal para laços de repetição, estruturas condicionais, tratamento de strings e interação via console (sem bibliotecas externas).
+
+<p align="center">─────────────────────── · ───────────────────────</p>
+
+### ✦ Regras
+
+Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o tamanho (**`P`**, **`M`** ou **`G`**):
+
+| Tamanho | Pizza Salgada (`PS`) | Pizza Doce (`PD`) |
 | :---: | :---: | :---: |
 | **P** *(Pequena)* | `R$ 30,00` | `R$ 34,00` |
 | **M** *(Média)* | `R$ 45,00` | `R$ 48,00` |
 | **G** *(Grande)* | `R$ 60,00` | `R$ 66,00` |
 
-<p align="center">‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾. ─────────────────────── ‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.</p>
-
-### ╰┈➤ ꒰ 🧾 ꒱ Como Foi Construído
-
-- **₊˚🌿 Loop Contínuo de Pedidos (`while`):** Estruturação de um laço interativo que permite adicionar múltiplos itens em uma única sessão enquanto valida as entradas de sabor e tamanho.
-- **₊˚🍅 Matriz de Decisão (`if / elif / else`):** Implementação de ramificações condicionais aninhadas mapeando cada combinação de sabor (`PS` / `PD`) e tamanho (`P` / `M` / `G`) ao seu respectivo preço.
-- **₊˚🌿 Acúmulo de Estado e Sanitização:** Uso de uma variável acumuladora `total` em conjunto com normalização de strings via `.strip().upper()` e `f-strings` formatadas para o recibo final.
-
-<br/>
-
-<div align="center">
-  <p>°•. 🍅 .•° ────── ꒰ 💗 ꒱ ────── °•. 🍅 .•°</p>
-  <p><i>feito com 💗 por <b>Maria Eduarda Gonçalves</b></i></p>
-</div>
+- Entradas são normalizadas com `.strip().upper()` para aceitar letras minúsculas ou espaços extras.
+- O cliente pode adicionar quantos itens quiser no loop até encerrar o pedido, somando tudo no total.
