@@ -55,6 +55,8 @@ Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o t
 
 ### ✦ Exemplo de Uso
 
+### ✦ Exemplo de Uso
+
 ```text
 Bem-vindo à Pizzaria de Maria Eduarda Gonçalves!
 Aqui está o nosso cardápio:
