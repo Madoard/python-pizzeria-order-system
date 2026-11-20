@@ -38,3 +38,103 @@ Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o t
 
 - Entradas são normalizadas com `.strip().upper()` para aceitar letras minúsculas ou espaços extras.
 - O cliente pode adicionar quantos itens quiser no loop até encerrar o pedido, somando tudo no total.
+<p align="center">─────────────────────── · ───────────────────────</p>
+
+### ✦ Como Executar
+
+1. **Pré-requisitos:** Tenha o **Python 3.x** instalado na máquina.
+2. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Madoard/NOME-DO-REPOSITORIO.git](https://github.com/Madoard/NOME-DO-REPOSITORIO.git)
+   cd NOME-DO-REPOSITORIO
+   ```
+3. **Execute o script (`pizzaria.py`):**
+   ```bash
+   python pizzaria.py
+   ```
+
+### ✦ Exemplo de Uso
+
+```text
+Welcome to Maria Eduarda Gonçalves's Pizzeria!
+Here is our menu:
+Size     Savory Pizza (SP)     Sweet Pizza (SW)
+ S            $ 30.00              $ 34.00
+ M            $ 45.00              $ 48.00
+ L            $ 60.00              $ 66.00
+
+Enter the desired flavor (SP/SW): sp
+Enter the desired size (S/M/L): m
+You ordered a Savory Pizza (Size M): $ 45.00
+
+Would you like to order anything else? (Y/N): y
+
+Enter the desired flavor (SP/SW): sw
+Enter the desired size (S/M/L): s
+You ordered a Sweet Pizza (Size S): $ 34.00
+
+Would you like to order anything else? (Y/N): n
+
+Thank you for your order! Your total is: $ 79.00
+```
+
+<p align="center">─────────────────────── · ───────────────────────</p>
+
+### ✦ Como Foi Construído
+
+O código completo está em [`pizzaria.py`](./pizzaria.py). Abaixo está a estrutura principal e como cada parte funciona:
+
+```python
+total = 0
+answer = "Y"
+
+while answer == "Y":
+    flavor = input("\nEnter the desired flavor (SP/SW): ").strip().upper()
+    while flavor != "SP" and flavor != "SW":
+        print("Invalid flavor. Please try again.")
+        flavor = input("Enter the desired flavor (SP/SW): ").strip().upper()
+
+    size = input("Enter the desired size (S/M/L): ").strip().upper()
+    while size != "S" and size != "M" and size != "L":
+        print("Invalid size. Please try again.")
+        size = input("Enter the desired size (S/M/L): ").strip().upper()
+
+    if flavor == "SP":
+        if size == "S":
+            print("You ordered a Savory Pizza (Size S): $ 30.00")
+            total += 30
+        elif size == "M":
+            print("You ordered a Savory Pizza (Size M): $ 45.00")
+            total += 45
+        else:
+            print("You ordered a Savory Pizza (Size L): $ 60.00")
+            total += 60
+    else:
+        if size == "S":
+            print("You ordered a Sweet Pizza (Size S): $ 34.00")
+            total += 34
+        elif size == "M":
+            print("You ordered a Sweet Pizza (Size M): $ 48.00")
+            total += 48
+        else:
+            print("You ordered a Sweet Pizza (Size L): $ 66.00")
+            total += 66
+
+    answer = input("\nWould you like to order anything else? (Y/N): ").strip().upper()
+    while answer != "Y" and answer != "N":
+        print("Invalid option. Please enter Y or N.")
+        answer = input("Would you like to order anything else? (Y/N): ").strip().upper()
+
+print(f"\nThank you for your order! Your total is: $ {total:.2f}")
+```
+
+- **Loop contínuo de pedidos (`while`):** Mantém o fluxo ativo enquanto o cliente desejar adicionar itens (`Y`) e valida as respostas de sabor (`SP`/`SW`), tamanho (`S`/`M`/`L`) e continuidade (`Y`/`N`).
+- **Condicionais aninhadas (`if / elif / else`):** Mapeia cada combinação de sabor e tamanho ao valor correspondente do cardápio.
+- **Acúmulo e formatação:** Soma os valores na variável `total`, sanitiza entradas com `.strip().upper()` e exibe o valor final formatado com `f-strings` (`:.2f`).
+
+<br/>
+
+<div align="center">
+  <p>°•. ✦ .•° ────── ꒰ ✦ ꒱ ────── °•. ✦ .•°</p>
+  <p><i>Feito por <b>Eduarda Gonçalves</b></i></p>
+</div>
