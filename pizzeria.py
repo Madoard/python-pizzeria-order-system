@@ -1,54 +1,54 @@
-# Display welcome message and menu
-print("Welcome to Maria Eduarda Gonçalves's Pizzeria!\nHere is our menu:")
-print("Size     Savory Pizza (SP)     Sweet Pizza (SW)")
-print(" S            $ 30.00              $ 34.00")
-print(" M            $ 45.00              $ 48.00")
-print(" L            $ 60.00              $ 66.00")
+# Exibe mensagem de boas-vindas e o cardápio
+print("Bem-vindo à Pizzaria de Maria Eduarda Gonçalves!\nAqui está o nosso cardápio:")
+print("Tamanho     Pizza Salgada (PS)     Pizza Doce (PD)")
+print(" P              R$ 30.00              R$ 34.00")
+print(" M              R$ 45.00              R$ 48.00")
+print(" G              R$ 60.00              R$ 66.00")
 
-total = 0  # Accumulator variable for the order total
-answer = "Y"  # Control variable for multiple orders
+total = 0  # Variável acumuladora para o total do pedido
+resposta = "S"  # Variável de controle para múltiplos pedidos
 
-# Main loop: runs while the customer wants to keep ordering
-while answer == "Y":
-    # Ask for pizza flavor and validate input
-    flavor = input("\nEnter the desired flavor (SP/SW): ").strip().upper()
-    while flavor != "SP" and flavor != "SW":
-        print("Invalid flavor. Please try again.")
-        flavor = input("Enter the desired flavor (SP/SW): ").strip().upper()
+# Loop principal: roda enquanto o cliente quiser continuar pedindo
+while resposta == "S":
+    # Solicita o sabor da pizza e valida a entrada
+    sabor = input("\nInforme o sabor desejado (PS/PD): ").strip().upper()
+    while sabor != "PS" and sabor != "PD":
+        print("Sabor inválido. Tente novamente.")
+        sabor = input("Informe o sabor desejado (PS/PD): ").strip().upper()
 
-    # Ask for pizza size and validate input
-    size = input("Enter the desired size (S/M/L): ").strip().upper()
-    while size != "S" and size != "M" and size != "L":
-        print("Invalid size. Please try again.")
-        size = input("Enter the desired size (S/M/L): ").strip().upper()
+    # Solicita o tamanho da pizza e valida a entrada
+    tamanho = input("Informe o tamanho desejado (P/M/G): ").strip().upper()
+    while tamanho != "P" and tamanho != "M" and tamanho != "G":
+        print("Tamanho inválido. Tente novamente.")
+        tamanho = input("Informe o tamanho desejado (P/M/G): ").strip().upper()
 
-    # Nested conditionals to determine price and add to total
-    if flavor == "SP":
-        if size == "S":
-            print("You ordered a Savory Pizza (Size S): $ 30.00")
+    # Condicionais aninhadas para definir o preço e somar ao total
+    if sabor == "PS":
+        if tamanho == "P":
+            print("Você pediu uma Pizza Salgada (Tamanho P): R$ 30.00")
             total += 30
-        elif size == "M":
-            print("You ordered a Savory Pizza (Size M): $ 45.00")
+        elif tamanho == "M":
+            print("Você pediu uma Pizza Salgada (Tamanho M): R$ 45.00")
             total += 45
         else:
-            print("You ordered a Savory Pizza (Size L): $ 60.00")
+            print("Você pediu uma Pizza Salgada (Tamanho G): R$ 60.00")
             total += 60
     else:
-        if size == "S":
-            print("You ordered a Sweet Pizza (Size S): $ 34.00")
+        if tamanho == "P":
+            print("Você pediu uma Pizza Doce (Tamanho P): R$ 34.00")
             total += 34
-        elif size == "M":
-            print("You ordered a Sweet Pizza (Size M): $ 48.00")
+        elif tamanho == "M":
+            print("Você pediu uma Pizza Doce (Tamanho M): R$ 48.00")
             total += 48
         else:
-            print("You ordered a Sweet Pizza (Size L): $ 66.00")
+            print("Você pediu uma Pizza Doce (Tamanho G): R$ 66.00")
             total += 66
 
-    # Ask if the customer wants to add more items
-    answer = input("\nWould you like to order anything else? (Y/N): ").strip().upper()
-    while answer != "Y" and answer != "N":
-        print("Invalid option. Please enter Y or N.")
-        answer = input("Would you like to order anything else? (Y/N): ").strip().upper()
+    # Pergunta se o cliente deseja adicionar mais itens
+    resposta = input("\nDeseja pedir mais alguma coisa? (S/N): ").strip().upper()
+    while resposta != "S" and resposta != "N":
+        print("Opção inválida. Digite S ou N.")
+        resposta = input("Deseja pedir mais alguma coisa? (S/N): ").strip().upper()
 
-# Display final order total
-print(f"\nThank you for your order! Your total is: $ {total:.2f}")
+# Exibe o valor final do pedido
+print(f"\nObrigado pelo pedido! O total da sua conta é: R$ {total:.2f}")
