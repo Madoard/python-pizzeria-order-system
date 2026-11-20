@@ -45,7 +45,8 @@ Os preços variam conforme a categoria (**Salgada `PS`** ou **Doce `PD`**) e o t
 1. **Pré-requisitos:** Tenha o **Python 3.x** instalado na máquina.
 2. **Clone o repositório:**
    ```bash
-   https://github.com/Madoard/python-pizzaria-order-system
+    git clone https://github.com/Madoard/python-pizzaria-order-system
+    cd python-pizzaria-order-system 
    ```
 3. **Execute o script (`pizzaria.py`):**
    ```bash
