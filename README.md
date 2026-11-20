@@ -2,7 +2,7 @@
 
   <p>─────────────────────── ✦ ───────────────────────</p>
 
-  <h1>˚₊‧꒰ა Sistema de Pedidos de Pizzaria em Python ໒꒱‧₊˚</h1>
+  <h1>꒰ა Sistema de Pedidos de Pizzaria em Python ໒꒱</h1>
 
   <p>
     <i>Sistema de pedidos em Python via linha de comando para combinar sabores e tamanhos de pizza com cálculo automático do total.</i>
